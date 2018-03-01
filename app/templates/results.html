@@ -21,8 +21,13 @@
 		<span class="result-item">Your favorite food is {{ surveyResponse['food']}}</span>
 		<span class="result-item">Your favorite vacation spot is {{ surveyResponse['vacation']}}</span>
 
-		<h3>Wow! Your front end skillz are getting sharp!</h3>
-		<span class="result-item">Before IO Lab, your front end skillz were at a {{ surveyResponse['fe-before']}}</span>
+		<!--<h3>Wow! Your front end skillz are getting sharp!</h3>-->
+		{% if surveyResponse['fe-before'] < surveyResponse['fe-after'] %}
+			<h3>Wow! Your front end skills are getting sharp!</h3>
+		{% else %}
+			<h3>Oops... We need to do better.</h3>
+		{% endif %}
+		<span class="result-item">Before IO Lab, your front end skills were at a {{ surveyResponse['fe-before']}}</span>
 		<span class="result-item">But in just a few short weeks of IO Lab, your front end skillz are now a {{ surveyResponse['fe-after']}}</span>
 
 	</div>

@@ -6,14 +6,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- 1. import css file here -->
+    <link rel="stylesheet" href="static/main.css">
 
 <!-- how to extend header to other templates -->
+    {% block header %}
     <div id="site-title-wrapper">
       <div href=# id="site-icon-wrapper">
         <img src="https://cdn.smassets.net/wp-content/uploads/2017/05/CR1651_meet_goldie_v2.2kk.png">
       </div>
       <h3 id="site-title">Survey Monkey</h3>
     </div>
+    {% endblock %}
   </head>
 
   <body>

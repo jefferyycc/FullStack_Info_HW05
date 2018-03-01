@@ -1,13 +1,14 @@
 
 
 <!-- 1. extend from base-->
-
+{% extends "base.html" %}
 {% block title %}
 	Survey
 {% endblock %}
 
 {% block header %}
 	<!-- super function here -->
+	{{super()}}
 	<form action="logout" id="logout">
 		<span id="username">Logged in as {{ name }}</span>
 		<input class="action-button" id="logout-button" type="submit" value="Logout">
@@ -16,6 +17,7 @@
 
 
 <!-- 1. extend from content block from the base-->
+{% block content %}
 	<div class="main-container">
 		<h3>Your Favorites</h3>
 		<label class="survey-item sm-label">Favorite color?
@@ -33,3 +35,4 @@
 
 		<button class="action-button" id="submit-survey">Submit</button>
 </div>
+{% endblock %}

@@ -203,7 +203,7 @@ input[type=range]::-webkit-slider-runnable-track {
 	min-height: 50vh;
 	margin: 2rem 0 0 25%;
 	padding: 1rem;
-	text-align: left;
+	text-align: center;
 	width: 50%;
 }
 
